@@ -6,4 +6,4 @@ sentence-transformers
 mcp
 httpx
 uvicorn
-starlette
+starlette<1

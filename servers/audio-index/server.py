@@ -5,6 +5,7 @@ from mcp.server import Server
 from mcp.server.sse import SseServerTransport
 from starlette.applications import Starlette
 from starlette.requests import Request
+from starlette.responses import Response
 from starlette.routing import Mount, Route
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
@@ -30,9 +31,9 @@ def create_starlette_app(mcp_server: Server, *, debug: bool = False) -> Starlett
     """
     sse = SseServerTransport("/messages/")
 
-    async def handle_sse(request: Request) -> None:
+    async def handle_sse(request: Request) -> Response:
         """Handle SSE connections from clients.
-        
+
         Args:
             request: The incoming request
         """
@@ -51,6 +52,7 @@ def create_starlette_app(mcp_server: Server, *, debug: bool = False) -> Starlett
         except Exception as e:
             logger.error(f"Error in SSE connection: {str(e)}")
             raise
+        return Response()
 
     # Configure middleware
     middleware = [
