@@ -25,7 +25,7 @@ documents_chunks = pxt.create_view(
 
 # Configure embedding model
 embed_model = sentence_transformer.using(
-    model_id="intfloat/e5-large-v2"
+    model_id="BAAI/bge-large-en-v1.5"
 )
 
 # Add search capability

@@ -3,7 +3,7 @@ tiktoken
 openai
 sentence-transformers
 spacy
-mcp
+mcp<2
 httpx
 uvicorn
 starlette<1

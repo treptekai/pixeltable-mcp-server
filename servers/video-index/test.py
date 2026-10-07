@@ -7,7 +7,7 @@ from pixeltable.iterators import AudioSplitter, FrameIterator
 from pixeltable.iterators.string import StringSplitter
 from pixeltable.functions.openai import vision
 
-EMBED_MODEL = sentence_transformer.using(model_id='intfloat/e5-large-v2')
+EMBED_MODEL = sentence_transformer.using(model_id='BAAI/bge-large-en-v1.5')
 
 # Set to True to delete existing index
 directory = 'video_index'

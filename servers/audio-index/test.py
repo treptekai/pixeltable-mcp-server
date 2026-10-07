@@ -45,7 +45,7 @@ if TABLE_NAME not in pxt.list_tables():
     )
 
     # Define the embedding model
-    embed_model = sentence_transformer.using(model_id='intfloat/e5-large-v2')
+    embed_model = sentence_transformer.using(model_id='BAAI/bge-large-en-v1.5')
 
     # Create embedding index
     sentences_view.add_embedding_index(column='text', string_embed=embed_model)

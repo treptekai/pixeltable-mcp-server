@@ -24,7 +24,7 @@ DIRECTORY = 'audio_index'
 DEFAULT_CHUNK_DURATION = 30.0
 DEFAULT_OVERLAP_DURATION = 2.0
 DEFAULT_MIN_CHUNK_DURATION = 5.0
-DEFAULT_EMBEDDING_MODEL = 'intfloat/e5-large-v2'
+DEFAULT_EMBEDDING_MODEL = 'BAAI/bge-large-en-v1.5'
 DEFAULT_WHISPER_MODEL = 'base.en'
 
 # Registry to hold all audio indexes

@@ -56,7 +56,7 @@ def setup_document_index(table_name: str) -> str:
         )
 
         # Define the embedding model and create embedding index
-        embed_model = sentence_transformer.using(model_id='intfloat/e5-large-v2')
+        embed_model = sentence_transformer.using(model_id='BAAI/bge-large-en-v1.5')
         chunks_view.add_embedding_index(
             column='text',
             string_embed=embed_model,
